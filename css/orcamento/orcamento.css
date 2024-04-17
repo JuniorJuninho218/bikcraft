@@ -34,9 +34,27 @@ left: -12px;
 .orcamento-produtos {
   border-radius: 5px 0 0 5px;
   background: var(--cor-12);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-content:start ;
+}
+
+.orcamento-produtos > * {
+  grid-column: 1/-1;
+}
+
+.orcamento-produtos label {
+  color: var(--cor-4);
+  background-color: var(--cor-10);
 }
 
 .orcamento-dados {
   border-radius: 5px 0 0 5px;
   background: var(--cor-0);
+}
+
+#bikcraft:checked ~ #orcamento-bikcraft,
+#seguro:checked ~ #orcamento-seguro {
+display: block;
 }
